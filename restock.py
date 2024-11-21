@@ -1,9 +1,12 @@
 def restock_inventory(available_items, inventory_records, current_day):
     if current_day % 7 == 0:
         to_stock = 2000 - available_items
-        available_items = 2000
-        New_row = [current_day, 0, to_stock, 2000]
-        inventory_records.append(New_row)
+        available_items += to_stock
+        if current_day == 0:
+            new_row = [current_day,0,2000,2000]
+        else:
+            new_row = [current_day, 0, to_stock, 2000]
+        inventory_records.append(new_row)
 
     '''
 ***********COMPLETE THIS FUNCTION***********

@@ -39,6 +39,9 @@ def check_report_correctness():
     
     last_remaining_units = int(data[-1][3])
     if total_restocked - total_sold - last_remaining_units != 0:
+        print(total_restocked)
+        print(total_sold)
+        print(last_remaining_units)
         print(f"Error: Totals do not match in file {file}")
         return
     
