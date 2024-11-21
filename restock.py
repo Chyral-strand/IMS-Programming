@@ -1,11 +1,11 @@
 def restock_inventory(available_items, inventory_records, current_day):
     if current_day == 0 or current_day % 7 == 0:
-        inventory_records.append(current_day)
-        inventory_records.append(0)
+        inventory_records.append(str(current_day))
+        inventory_records.append("0")
         stockage = 2000 - available_items
         available_items += stockage
-        inventory_records.append(stockage)
-        inventory_records.append(available_items)
+        inventory_records.append(str(stockage))
+        inventory_records.append(str(available_items))
     '''
 ***********COMPLETE THIS FUNCTION***********
 This function is responsible for updating the stock/restock for a given day.
