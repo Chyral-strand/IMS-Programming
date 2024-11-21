@@ -2,12 +2,10 @@ import random
 
 def daily_sales(available_items, inventory_records, current_day):
     if current_day % 7 != 0:
-        inventory_records.append(str(current_day))
         sales = random.randint(0,200)
         available_items -= sales
-        inventory_records.append(str(sales))
-        inventory_records.append("0")
-        inventory_records.append(str(available_items))
+        new_row = [current_day, sales, 0, available_items]
+        inventory_records.append(new_row)
     '''
 ***********COMPLETE THIS FUNCTION***********
 This function is responsible for updating the sales for a given day.
